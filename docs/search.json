@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "{ecosim} - interactive ecological simulations for teaching",
+    "section": "",
+    "text": "a collection of interactive apps to simulate ecological theory\nr • plotly • shiny • leaflet • js"
+  },
+  {
+    "objectID": "index.html#econiche-multispecies-niche-simulator",
+    "href": "index.html#econiche-multispecies-niche-simulator",
+    "title": "{ecosim} - interactive ecological simulations for teaching",
+    "section": "{ecoNiche}: multispecies niche simulator",
+    "text": "{ecoNiche}: multispecies niche simulator\n\nA tool to explore and visualize the ecological niches of multiple marine species in either 2D or 3D space. The app provides a simulation-based interface where users can adjust environmental variables (temperature, light, nutrients) and species traits to see how different organisms may occupy distinct or overlapping regions of environmental space.\n[Launchapp] [View source code]\nThe “niche space” is visualized as convex hulls surrounding the simulated environmental conditions occupied by individuals of each species, providing an approximation of their realized niche breadth and position within environmental gradients. The app can be used to reflect ecological concepts like niche partitioning, competition, and environmental filtering by generating synthetic individuals for each species based on user-defined means and standard deviations. The realized niche space is represented as convex hulls encapsulating individual data points for each species, offering insights into the breadth and position of their ecological tolerances.\nThe app is built with Shiny, plotly, and shinyjs for interactivity, and uses cxhull for 3D convex hull construction. Users define the number of species and adjust sliders for each species’ environmental preferences. Data points are generated with rnorm() and filtered to stay within ecological bounds.\n\n2D view: plotly scatterplot x,y (temperature vs. light) with optional convex hulls and points\n3D view, plotly scatterplot x,y (temperature vs. light) with z (nutrients) with optional convex hulls (cxhull and transparent meshes)\n\nThe UI dynamically adapts to the number of species and species names, using colored tabs and responsive components, and users can switch between 2D and 3D interactive plots.\n\n\nSecond-Year Ecology Questions\n\nHow does niche overlap change as environmental variance increases?\n“How does increasing the standard deviation of light or temperature for two competing species affect their niche overlap and potential for coexistence?”\n[concepts: niche breadth, competitive exclusion, environmental tolerance]\nWhat happens to species distributions when one niche shifts due to climate change?\n“How does a 2°C increase in mean temperature for a single species impact its niche position relative to others?”\n[concepts: climate change effects, realized niche, range shifts]\nCan multiple species coexist in similar niche spaces?\n“Can more than two species coexist if they occupy similar mean environmental values but have different niche widths?”\n[concepts: resource partitioning, limiting similarity]\n\n\n\nThird-Year Ecology Questions\n\nHow does the addition of a third dimension (nutrients) affect niche differentiation?\n“How does switching from 2D to 3D niche space affect the perceived overlap between coral and seagrass niches?”\n[concepts: niche dimensionality, hypervolume theory]\nDo species with broader environmental tolerances dominate niche space?\n“When increasing variance for one species, how much of the total environmental volume does its niche occupy relative to others?”\n[concepts: niche breadth, generalist vs specialist strategies]\nHow does niche packing differ between communities with different species richness?\n“How does the structure of niche space change when comparing communities with 2, 5, and 10 species?”\n[concepts: community assembly, niche packing limiting similarity]\n\n\n\nSource code\n\n\nFuture updates\n\ninclude biotic interactions / dispersal boundaries to introduce fundamental vs realised niche space\nintroduce Hutchinson’s n-dimensional hypervolume (integrate with the hypervolume package) to include additional environmental drivers\nexpand different approaches to determining niches (e.g. KDE, Minimum Volume Ellipsoid) and additional distributions for simulating tolerances"
+  },
+  {
+    "objectID": "index.html#ecodisturb-disturbance-and-community-structure-simulator",
+    "href": "index.html#ecodisturb-disturbance-and-community-structure-simulator",
+    "title": "{ecosim} - interactive ecological simulations for teaching",
+    "section": "{ecoDisturb}: disturbance and community structure simulator",
+    "text": "{ecoDisturb}: disturbance and community structure simulator\n\n\nSimulate how varying disturbance frequency and intensity affect species richness and community composition over time, using patch dynamics and stochastic colonization/extinction."
+  },
+  {
+    "objectID": "index.html#ecointeract-species-interactions-population-dynamics-simulator",
+    "href": "index.html#ecointeract-species-interactions-population-dynamics-simulator",
+    "title": "{ecosim} - interactive ecological simulations for teaching",
+    "section": "{ecoInteract}: species interactions & population dynamics simulator",
+    "text": "{ecoInteract}: species interactions & population dynamics simulator\nSimulate Lotka-Volterra models (predator-prey, competition, mutualism) and explore how interaction coefficients and environmental constraints affect population trajectories."
+  },
+  {
+    "objectID": "index.html#ecorestore-optimising-spatial-decisionmaking-for-effective-restoration-outcomes",
+    "href": "index.html#ecorestore-optimising-spatial-decisionmaking-for-effective-restoration-outcomes",
+    "title": "{ecosim} - interactive ecological simulations for teaching",
+    "section": "{ecoRestore}: optimising spatial decisionmaking for effective restoration outcomes",
+    "text": "{ecoRestore}: optimising spatial decisionmaking for effective restoration outcomes\nSimulate how environmental variability, habitat selection and management zoning influences the prioritisation of restoration sites across a marine landscape. Through simulation approaches, explore trade-offs, sensitivity, and strategies in spatial planning under uncertainty."
+  },
+  {
+    "objectID": "ecosim.html",
+    "href": "ecosim.html",
+    "title": "{ecoNiche}",
+    "section": "",
+    "text": "https://01984e4f-7637-9569-1241-7105488e22d7.share.connect.posit.cloud/&lt;/a&gt;\" frameborder=\"0\" style=\"width:100%;height:100vh;border:none;display:block\"&gt;&lt;/p&gt;"
+  },
+  {
+    "objectID": "ecosim.html#section",
+    "href": "ecosim.html#section",
+    "title": "{ecoNiche}",
+    "section": "",
+    "text": "https://01984e4f-7637-9569-1241-7105488e22d7.share.connect.posit.cloud/&lt;/a&gt;\" frameborder=\"0\" style=\"width:100%;height:100vh;border:none;display:block\"&gt;&lt;/p&gt;"
+  },
+  {
+    "objectID": "ecoNiche.html",
+    "href": "ecoNiche.html",
+    "title": "{ecoNiche}",
+    "section": "",
+    "text": "https://01984e4f-7637-9569-1241-7105488e22d7.share.connect.posit.cloud/&lt;/a&gt;\" frameborder=\"0\" style=\"width:100%;height:100vh;border:none;display:block\"&gt;&lt;/p&gt;"
+  },
+  {
+    "objectID": "ecoNiche.html#section",
+    "href": "ecoNiche.html#section",
+    "title": "{ecoNiche}",
+    "section": "",
+    "text": "https://01984e4f-7637-9569-1241-7105488e22d7.share.connect.posit.cloud/&lt;/a&gt;\" frameborder=\"0\" style=\"width:100%;height:100vh;border:none;display:block\"&gt;&lt;/p&gt;"
+  }
+]

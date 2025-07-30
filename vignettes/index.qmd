@@ -1,0 +1,101 @@
+---
+title: "{ecosim} - interactive ecological simulations for teaching"
+format: html
+editor: visual
+---
+
+<img src="images/clipboard-3124983266.png" alt="R Logo" style="height: 120px; float: right; margin-left: 100px;"/>
+
+a collection of interactive apps to simulate ecological theory
+
+`r` • `plotly` • `shiny` • `leaflet` • `js`
+
+-   contact: g.roff \@ uq.edu.au
+
+<br> <br> <br>
+
+## {ecoNiche}: multispecies niche simulator
+
+![](images/clipboard-2521384870.gif)
+
+A tool to explore and visualize the ecological niches of multiple marine species in either 2D or 3D space. The app provides a simulation-based interface where users can adjust environmental variables (temperature, light, nutrients) and species traits to see how different organisms may occupy distinct or overlapping regions of environmental space.
+
+\[[Launch](https://marine-ecologist-econiche.share.connect.posit.cloud/)[ app](%22https://github.com/marine-ecologist/ecosim%22)\] \[[View source code](%22https://github.com/marine-ecologist/ecosim%22)\]
+
+The “niche space” is visualized as convex hulls surrounding the simulated environmental conditions occupied by individuals of each species, providing an approximation of their realized niche breadth and position within environmental gradients. The app can be used to reflect ecological concepts like niche partitioning, competition, and environmental filtering by generating synthetic individuals for each species based on user-defined means and standard deviations. The realized niche space is represented as convex hulls encapsulating individual data points for each species, offering insights into the breadth and position of their ecological tolerances.
+
+The app is built with `Shiny`, `plotly`, and `shinyjs` for interactivity, and uses `cxhull` for 3D convex hull construction. Users define the number of species and adjust sliders for each species’ environmental preferences. Data points are generated with `rnorm()` and filtered to stay within ecological bounds.
+
+-   2D view: `plotly` scatterplot `x`,`y` (temperature vs. light) with optional convex hulls and points
+-   3D view, `plotly` scatterplot `x`,`y` (temperature vs. light) with `z` (nutrients) with optional convex hulls (`cxhull` and transparent meshes)
+
+The UI dynamically adapts to the number of species and species names, using colored tabs and responsive components, and users can switch between 2D and 3D interactive plots.
+
+![](images/clipboard-1553811198.png)
+
+#### Second-Year Ecology Questions
+
+1.  [How does niche overlap change as environmental variance increases?]{.underline}
+
+    “How does increasing the standard deviation of light or temperature for two competing species affect their niche overlap and potential for coexistence?”
+
+    \[**concepts**: *niche breadth, competitive exclusion, environmental tolerance*\]
+
+2.  What happens to species distributions when one niche shifts due to climate change?
+
+    “How does a 2°C increase in mean temperature for a single species impact its niche position relative to others?”
+
+    \[**concepts**: *climate change effects, realized niche, range shifts*\]
+
+3.  [Can multiple species coexist in similar niche spaces?]{.underline}
+
+    “Can more than two species coexist if they occupy similar mean environmental values but have different niche widths?”
+
+    \[**concepts**: *resource partitioning, limiting similarity*\]
+
+#### Third-Year Ecology Questions
+
+1.  [How does the addition of a third dimension (nutrients) affect niche differentiation?]{.underline}
+
+    “How does switching from 2D to 3D niche space affect the perceived overlap between coral and seagrass niches?”
+
+    \[**concepts**: *niche dimensionality, hypervolume theory*\]
+
+2.  [Do species with broader environmental tolerances dominate niche space?]{.underline}
+
+    “When increasing variance for one species, how much of the total environmental volume does its niche occupy relative to others?”
+
+    \[**concepts**: *niche breadth, generalist vs specialist strategies*\]
+
+3.  [How does niche packing differ between communities with different species richness?]{.underline}
+
+    “How does the structure of niche space change when comparing communities with 2, 5, and 10 species?”\
+    \[**concepts**: *community assembly, niche packing limiting similarity*\]
+
+#### Source code
+
+#### Future updates
+
+-   include biotic interactions / dispersal boundaries to introduce fundamental vs realised niche space
+-   introduce Hutchinson’s n-dimensional hypervolume (integrate with the `hypervolume` package) to include additional environmental drivers
+-   expand different approaches to determining niches (e.g. KDE, Minimum Volume Ellipsoid) and additional distributions for simulating tolerances
+
+## {ecoDisturb}: disturbance and community structure simulator
+
+![](images/clipboard-1728456109.png)
+
+![](images/clipboard-1752301061.png)
+
+Simulate how varying disturbance frequency and intensity affect species richness and community composition over time, using patch dynamics and stochastic colonization/extinction.
+
+## {ecoInteract}: species interactions & population dynamics simulator
+
+Simulate Lotka-Volterra models (predator-prey, competition, mutualism) and explore how interaction coefficients and environmental constraints affect population trajectories.
+
+![](images/clipboard-415651364.gif)
+
+## {ecoRestore}: optimising spatial decisionmaking for effective restoration outcomes
+
+Simulate how environmental variability, habitat selection and management zoning influences the prioritisation of restoration sites across a marine landscape. Through simulation approaches, explore trade-offs, sensitivity, and strategies in spatial planning under uncertainty.
+
+![](images/clipboard-2170014305.gif)

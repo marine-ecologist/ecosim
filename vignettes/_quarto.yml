@@ -3,7 +3,7 @@ project:
   output-dir: ../docs
 
 website:
-  title: "<img src='../images/hex.png' style='height:36px; vertical-align:middle; margin-right:2px;'> {ecosim}"
+  title: "<img src='images/hex.png' style='height:36px; vertical-align:middle; margin-right:2px;'> {ecosim}"
   navbar:
     left:
       - text: Home
